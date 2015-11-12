@@ -1,0 +1,180 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04.10.2015, 14:49:39
+    Author     : tomnuk
+*/
+body
+{
+    background:#DFDFF4;
+margin:0 auto;
+padding:0;
+font: 14px/24px Arial, Tahoma, sans-serif;
+}
+.top
+{
+ background:#5B71A2; 
+ height: 15%;
+ width:100%;
+}
+.search
+{
+    width: 100%;
+    height: 15%;
+    background: red;
+    padding: 5px;
+    background: #B3B9E6;
+}
+.searchline
+{
+    border-radius: 3px;
+    width:200px;
+    height: 20px;
+    border: 0;
+    background: #FFFAD3;
+}
+.searchbtn
+{
+   border-radius: 8%; 
+   color:#F1F4FA;
+   background: #152d66;
+   border:0;
+   height: 20px;
+}
+.punkt
+{
+     display:block;
+     height:100px;   
+}
+.punkt a
+{
+ display:block;
+background:#152d66;
+border-radius: 5px;
+padding:12%;
+margin:0px;
+padding-right:0px;
+border-bottom-width:5px;
+ border-bottom-style:solid;
+ border-bottom-color:#67728b;
+text-decoration: none;
+color:#F1F4FA;
+}
+.punkt a:hover
+{
+    box-shadow: 0px 0px 15px #66ccff;
+}
+.workingarea
+{
+    width:100%;
+    border:1;
+}
+
+.area
+{
+    width:100%;
+    height: 100%;
+    margin:0 auto;
+    min-height:100%;
+}
+.workingarea butbase{
+    color:red;
+}
+/*Форма редактирования*/
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    cursor: default;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    z-index: 1;
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -ms-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    transition: opacity .5s;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+.popup {
+    background-color: #fff;
+    border: 3px solid #fff;
+    display: inline-block;
+    left: 30%;
+    opacity: 0;
+    padding: 15px;
+    position: fixed;
+    text-align: justify;
+  font: 14px Helvetica, Arial, Sans-Serif;
+    top: 25%;
+    visibility: hidden;
+    z-index: 10;
+  
+    -webkit-transform: translate(-17%, -17%);
+    -moz-transform: translate(-17%, -17%);
+    -ms-transform: translate(-17%, -17%);
+    -o-transform: translate(-17%, -17%);
+    transform: translate(-17%, -17%);
+
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+
+    -webkit-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+    -moz-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+    -ms-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+    -o-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+    box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+
+    -webkit-transition: opacity .5s, top .5s;
+    -moz-transition: opacity .5s, top .5s;
+    -ms-transition: opacity .5s, top .5s;
+    -o-transition: opacity .5s, top .5s;
+    transition: opacity .5s, top .5s;
+  
+}
+.overlay:target+.popup {
+    top: 25%;
+    opacity: 1;
+    visibility: visible;
+}
+.close {
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-decoration: none;
+    top: -15px;
+    width: 30px;
+
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+}
+.close:before {
+    color: rgba(255, 255, 255, 0.9);
+    content: "X";
+    font-size: 24px;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+}
+.close:hover {
+    background-color: rgba(64, 128, 128, 0.8);
+}
+.popup p, .popup div {
+    padding: 0px 5px 0px 5px;
+}
