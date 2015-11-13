@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 function generationCode ($length=6) {
 	$chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHI JKLMNOPRQSTUVWXYZ0123456789";
 	$code = "";
@@ -8,12 +8,7 @@ function generationCode ($length=6) {
 	}
 	return $code;
 }
-	$host="localhost";
-$database="controlsocket";
-$user="disp";
-$pswd="1234";
-$dbh=mysql_connect($host, $user, $pswd) or die("I can't connect to MySql :(");
-mysql_select_db($database) or die("I can't connect to database :(");
+	require_once 'pointdb.php';
 	if(isset($_POST['sumbit'])){
 		$query = mysql_query("SELECT user_id, user_password FROM users WHERE user_login='".mysql_real_escape_string($_POST['login'])."' LIMIT 1");
 			$data = mysql_fetch_assoc($query);

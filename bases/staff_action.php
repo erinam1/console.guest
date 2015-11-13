@@ -1,10 +1,5 @@
-<?php 
-$host="localhost";
-$database="controlsocket";
-$user="disp";
-$pswd="1234";
-$dbh=mysql_connect($host, $user, $pswd) or die("I can't connect to MySql :(");
-mysql_select_db($database) or die("I can't connect to database :(");
+﻿<?php 
+require_once 'pointdb.php';
 	$variabl= $_POST['comp'];
 	$query="SELECT * FROM staff, company WHERE  staff.id_comp=company.id_comp AND company.short_name='$variabl'";
 	$res=mysql_query($query);

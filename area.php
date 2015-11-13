@@ -1,11 +1,6 @@
-  <?php 
-$host="localhost";
-$database="controlsocket";
-$user="disp";
-$pswd="1234";
+﻿  <?php 
 
-$dbh=mysql_connect($host, $user, $pswd) or die("I can't connect to MySql :(");
-mysql_select_db($database) or die("I can't connect to database :(");
+require_once 'pointdb.php';
 	$query="SELECT `short_name`,`id_comp` FROM company ORDER BY short_name";
 	$res=mysql_query($query);
 
@@ -62,13 +57,16 @@ mysql_select_db($database) or die("I can't connect to database :(");
                 			<td><input class="status" type="text" name="status" value="" size="30" /></td>
                 		</tr>
 						<tr>
-                			<td colspan="3" align="right"><button type="sumbit" name="add_staff_btn">Добавить</button></td>
+                            <td colspan="2" align="right"><button type="reset" name="cancel"><a href="#x">Отменить</a></button></td>
+                			<td colspan="1" align="right"><button type="sumbit" name="add_staff_btn">Добавить</button></td>
                 		</tr>
                 	</table>
                 </form>
                 </div>
-                 <img src="image/Delete.png" width="30px" height="30px">
-                  <img src="image/edit.png" width="30px" height="30px">
+             <form method='POST' action='excel_staff.php' target='frame'>
+                <button name="excel_staff" type="sumbit">
                 <img src="image/excel.png" width="30px" height="30px">
+                </button>
+</form>
                  <img src="image/print.png" width="30px" height="30px">
 </td></tr></table>

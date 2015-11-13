@@ -1,11 +1,6 @@
 <?php 
-$host="localhost";
-$database="controlsocket";
-$user="disp";
-$pswd="1234";
 
-$dbh=mysql_connect($host, $user, $pswd) or die("I can't connect to MySql :(");
-mysql_select_db($database) or die("I can't connect to database :(");
+	require_once 'pointdb.php';
 	$query="SELECT id_staff, concat(staff.second_name,' ',staff.first_name,' ',staff.last_name) AS full_name,company.short_name,staff.begin_date,staff.end_date,staff.status 
 	FROM company,staff WHERE company.id_comp=staff.id_comp ORDER BY full_name;";
 	$res=mysql_query($query);
@@ -26,10 +21,10 @@ mysql_select_db($database) or die("I can't connect to database :(");
 	echo $row['status'];
 	echo "</td>";
 	echo "<td align='center' >";
-	echo "<form method='POST' action='edit_staff.php' target='frame'><button name='".$row['id_staff']."' type='sumbit'><img src='../image/edit.png' width='20px' height='20px'></button></form>";
+	echo "<form method='POST' action='edit_staff.php' target='frame'><button name='edit' value='".$row['id_staff']."' type='sumbit'><img src='../image/edit.png' width='20px' height='20px'></button></form>";
 	echo "</td>";
 	echo "<td align='center' >";
-	echo "<form method='POST' action='delete_staff.php' target='frame'><button name='".$row['id_staff']."' type='sumbit'><img src='../image/Delete.png' width='20px' height='20px'></button></form>";
+	echo "<form method='POST' action='delete_staff.php' target='frame'><button name='del' value='".$row['id_staff']."' type='sumbit'><img src='../image/Delete.png' width='20px' height='20px'></button></form>";
 	echo "</td>";
 }
 echo "</tr></table>";

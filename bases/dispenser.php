@@ -1,11 +1,5 @@
-<?php 
-$host="localhost";
-$database="controlsocket";
-$user="disp";
-$pswd="1234";
-
-$dbh=mysql_connect($host, $user, $pswd) or die("I can't connect to MySql :(");
-mysql_select_db($database) or die("I can't connect to database :(");
+﻿<?php 
+require_once 'pointdb.php';
 	$query="SELECT * FROM `dispenser`";
 	$res=mysql_query($query);
 	echo"<table border='0' width='100%' height='100%' style='background:#E8D289;' >";
