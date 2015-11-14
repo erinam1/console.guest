@@ -36,10 +36,10 @@
                 
              </tr>
            </thead>
-         <tbody>
+         <tbody border="0">
           <tr>
             <td width="100%" colspan="2">
-                <iframe name="arena" src="login.php" width="100%" height="500px" align="left" border="0">
+                <iframe name="arena" src="login.php" width="100%" height="500px" align="left" frameborder="0">
                     Ваш браузер не поддерживает плавающие фреймы!
                 </iframe>
             </td>

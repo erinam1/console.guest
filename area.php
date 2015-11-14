@@ -12,18 +12,18 @@ require_once 'pointdb.php';
         <link rel="stylesheet" type="text/css" href="style/titan.css" media="all">
     </head>
     <body>
-    	<table width="100%">
+    	<table width="100%" border="0">
     		<tr>
-    			<td>
+    			<td colspan="3">
 <iframe src="bases/staff.php" width="100%" height="350px" align="left" frameborder="0"></iframe>
 </td></tr>
 <tr>
-	<td>
-<a id="add_staff_but" href="#add_staff"><img src="image/add.png" width="30px" height="30px"></a>
+	<td >
+<a id="add_staff_but" href="#add_staff"><button><img src="image/add.png" width="30px" height="30px">Добавить пользователя</button></a>
                 <a id="add_staff" class="overlay" href="#x"></a>
                 <div class="popup">
                 	<form method='POST' action='update_all_staff.php' target='frame'>
-                	<table>
+                	<table border="0">
                 		<tr>
                 			<td colspan="3"><h4>Добавление нового пользователя</h4></td>
 
@@ -63,10 +63,20 @@ require_once 'pointdb.php';
                 	</table>
                 </form>
                 </div>
+            </td>
              <form method='POST' action='excel_staff.php' target='frame'>
+                <td align="left">
                 <button name="excel_staff" type="sumbit">
-                <img src="image/excel.png" width="30px" height="30px">
+                
+                <img src="image/excel.png" width="30px" height="30px">Сохранить Excel файл
                 </button>
-</form>
-                 <img src="image/print.png" width="30px" height="30px">
+                </form>
+                <a href="excel_staff_import.php">
+                <button>
+                
+                <img src="image/load-price.gif" width="30px" height="30px">Загрузить Excel файл
+                </button></a>
+            </td>
+</form><td>
+                <button><img src="image/print.png" width="30px" height="30px">Распечатать</button> 
 </td></tr></table>

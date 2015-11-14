@@ -4,9 +4,10 @@
 	$query="SELECT id_staff, concat(staff.second_name,' ',staff.first_name,' ',staff.last_name) AS full_name,company.short_name,staff.begin_date,staff.end_date,staff.status 
 	FROM company,staff WHERE company.id_comp=staff.id_comp ORDER BY full_name;";
 	$res=mysql_query($query);
-	echo"<table border='0' width='100%' height='100%' style='background:#E8D289;' >";
-	echo"<tr style='background:#DFBE51;'><td align='center'><b> Ф.И.О</b></td><td align='center'><b> Предприятие</b></td><td align='center'><b> Дата начала полномочий</b></td>
-	 <td align='center'><b> Окончание полномочий</b></td><td align='center'><b> Текущий статус</b></td><td align='center' colspan='2'><b> Действия</b></td></tr>";
+	echo"<table border='0' width='100%' height='100%' style='background:#5FBDCE;' >";
+	echo"<tr style='background:#04859D;'><td align='center'><b> Ф.И.О</b></td><td align='center'><b> Предприятие</b></td><td align='center'><b> Дата начала полномочий</b></td>
+	 <td align='center'><b> Окончание полномочий</b></td><td align='center'><b> Текущий статус</b></td><td align='center' colspan='2' style='
+vertical-align:top;'><b> Действия</b></td></tr>";
 	while($row = mysql_fetch_array($res))
 {
 	echo "<tr><td align='left'>";

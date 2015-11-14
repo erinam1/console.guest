@@ -11,5 +11,6 @@ require_once 'pointdb.php';
 	/*$query="INSERT INTO staff(first_name,second_name,id_comp) VALUES ('".$first_name."', '".$second_name."', ".$id_comp.")";*/
 	if(!mysql_query($query)) echo "error";
 	else echo "Данные добавлены";
+	echo "<a href='../area.php'><button>OK</button></a>";
 ?>
 

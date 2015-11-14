@@ -13,7 +13,7 @@ require_once 'pointdb.php';
 <html xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:f="http://xmlns.jcp.org/jsf/core">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="style/titan.css" media="all">
+        <link rel="stylesheet" type="text/css" href="../style/titan.css" media="all">
     </head>
     <body><tr><td>
 <a id="add_staff_but" href="#add_staff"><img src="image/add.png" width="30px" height="30px"></a>
